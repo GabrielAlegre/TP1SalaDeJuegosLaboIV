@@ -1,0 +1,31 @@
+<body>
+  <section style="margin-top: 37px;">
+    <div class="image">
+      <img [src]="perfil?.avatar_url" class="foto img-fluid rounded-start">
+      <!-- <img src="../../../assets/acercade.jpeg"> -->
+
+    </div>
+
+    <div class="content">
+      <h2 class="titulo">{{perfil?.name}} 4A</h2>
+      <span><!-- line here --></span>
+      <p style="font-size: 18px;">Bio: {{perfil?.bio}}<br><br>Ante cualquier consulta: Gabrielalegre68@gmail.com<br>{{perfil?.location}}</p>
+      <h2 style="padding-top: 15px;" class="titulo">Juego propio: Snake</h2>
+      <span></span>
+      <p style="font-size: 18px; white-space: pre-wrap;">
+        El juego de la serpiente, también conocido como Snake, es un clásico juego de arcade. El objetivo principal del juego es controlar una serpiente y hacerla crecer tanto como sea 
+        posible al comerse los alimentos disponibles, sin chocar contra las paredes o contra su propio cuerpo. Para ganar se debe obtener una puntuación de 50. La puntuación del jugador se basa en la cantidad 
+        de alimentos que la serpiente ha comido. Cada vez que la serpiente coma un alimento se sumaran 10 puntos. El juego termina cuando la serpiente choca contra una pared o contra 
+        su propio cuerpo. En ese momento, se muestra la puntuación obtenida y el jugador tiene la opción de jugar nuevamente
+        para intentar mejorar su marca</p>
+      <div class="links">
+        <li style="width: 400px;"><a href="{{perfil?.html_url}}" target="_blank">Git Hub</a></li>
+        <div class="horizontal-line"></div>
+        <li><a href="https://www.linkedin.com/in/gabriel-alegre-68575b216/" target="_blank">LinkedIn</a></li>
+        <div class="horizontal-line"></div>
+        <li><a>Contacto</a></li>
+      </div>
+    </div>
+  </section>
+
+</body>

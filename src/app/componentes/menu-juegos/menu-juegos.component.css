@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+.menu-juegos-container {
+  font-family: "Poppins", sans-serif;
+  background-image: url("../../../assets/fondoMenuDeJuegos.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  min-height: 94vh;
+}
+
+.card {
+  width: 22rem;
+  /* height: 40rem; */
+  background-color: rgba(7, 135, 105, 0.818);
+  margin-top: 4.5rem;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  border: 1px solid black;
+  box-shadow: 0 0 16px rgb(105, 1, 109);
+  padding-top: 20px;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 15px 15px rgba(31, 205, 5, 0.8);
+  transition: 0.5s;
+}
+
+.card-img-top {
+  width: 14rem;
+  height: 17rem;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.card-title {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: bold;
+}
+
+.h3 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.fondoParaTextos{
+  width: max-content;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(72, 236, 51, 0.87);
+  box-shadow: 0px 5px 5px rgb(185, 3, 161);
+  padding: 5px 15px;
+  /* margin-top: 0.1rem; */
+  border-radius: 20px;
+}
+
+.card-text {
+  color: white;
+  text-align: justify;
+  height: 5rem;
+  overflow: scroll;
+}
+
+.card-text::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 90%;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ****************************************************************** */
+/* ****************************************************************** */
+/* ****************************************************************** */
+/* ****************************************************************** */
+
+/* From uiverse.io */
+.btn-juegos {
+  padding: 1.3em 3em;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #000000;
+  padding: 10px 22px;
+  border: rgb(4, 215, 81) 5px solid;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 6px 6px 12px rgb(185, 3, 161);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  display: block;
+}
+
+.btn-juegos:hover {
+  background-color: rgba(131, 3, 87, 0.87);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  transform: translateY(-7px);
+}
+
+.btn-juegos:active {
+  transform: translateY(-1px);
+}
+
+@media screen and (max-width: 480px) {
+  .row,
+  .col {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .card-img-top {
+    width: 100%;
+  }
+
+  .card-2 {
+    margin-top: 2rem;
+  }
+}
+
+
+#contenedorPadre{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.titulo-menu {
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    width: max-content;
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(110, 11, 156, 0.87);
+    padding: 5px 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 8px rgb(71, 201, 99);
+    padding-top: 80px;
+    padding-bottom: 15px;
+    font-size: 40px;
+  }
+
+.tracking-in-expand-forward-top{animation:tracking-in-expand-forward-top 0.6s linear both} @keyframes tracking-in-expand-forward-top{0%{letter-spacing:-.2em;transform:translateZ(-700px) translateY(-100px);opacity:0}40%{opacity:.6}100%{transform:translateZ(0) translateY(0);opacity:1}}

@@ -1,0 +1,69 @@
+<section class="menu-juegos-container">
+    <div>
+        <h1 class="titulo-menu tracking-in-expand-forward-top animated-shadow ">Menu de Juegos disponibles</h1>
+    </div>
+    <div id="contenedorPadre">
+
+        <div class="card">
+            <h3 class="fondoParaTextos">Ahorcado</h3>
+            <img style="width: 260px; height: 260px; margin-top: 15px;" class="card-img-top" alt="Card image cap"
+                src="../../../assets/juegoAhorcado.png" />
+            <div class="card-body">
+                <h5 class="card-title">Descripcion:</h5>
+                <p class="card-text" style="padding-top: 12px;">
+                    El juego consiste en adivinar una palabra al azar en menos de 6 intentos.
+                </p>
+                <a [routerLink]="['ahorcado']" class="btn btn-primary btn-juegos">JUGAR</a>
+            </div>
+        </div>
+
+
+        <div class="card card-2">
+            <h3 class="fondoParaTextos">Mayor o Menor</h3>
+            <img style="width: 260px; height: 260px; margin-top: 15px;" class="card-img-top" alt="Card image cap"
+                src="../../../assets/juegoMayorMenor.jpg" />
+            <div class="card-body">
+                <h5 class="card-title">Descripcion:</h5>
+                <p class="card-text">
+                    El juego consiste en adivinar si la proxima carta es menor o mayor. Con 5
+                    aciertos consigue la victoria!.
+                </p>
+                <a [routerLink]="['mayor-menor']" class="btn btn-primary btn-juegos">JUGAR</a>
+            </div>
+        </div>
+
+
+        <div class="card card-2">
+            <h3 class="fondoParaTextos">Preguntados</h3>
+            <img style="width: 260px; height: 260px; margin-top: 15px;" class="card-img-top" alt="Card image cap"
+                src="../../../assets/juegosPreguntados.webp" />
+            <div class="card-body">
+                <h5 class="card-title">Descripcion:</h5>
+                <p class="card-text" style="padding-top: 20px;">
+                    Adivina el país de la bandera mostrada, si en 10 turnos aciertas 5 o mas veces para obtener la
+                    victoria.
+                </p>
+                <a [routerLink]="['preguntados']" class="btn btn-primary btn-juegos">JUGAR</a>
+            </div>
+        </div>
+
+
+        <div class="card card-2">
+            <h3 class="fondoParaTextos">Juego propio</h3>
+            <img style="width: 260px; height: 260px; margin-top: 15px;" class="card-img-top" alt="Card image cap"
+                src="../../../assets/juegoPropio.webp" />
+            <div class="card-body">
+                <h5 class="card-title">Descripcion:</h5>
+                <p class="card-text" style="padding-top: 20px;">
+                    El juego de la viborita, también conocido como Snake, para ganar se debe
+                    obter 50 puntos, cada vez que se come un alimento se obtendran 10. El juego consiste en
+                    controlar una serpiente en la pantalla y hacerla crecer tanto como sea posible al comerse los
+                    alimentos disponibles, sin chocar contra las paredes o contra su propio cuerpo.
+                </p>
+                <a [routerLink]="['viborita']" class="btn btn-primary btn-juegos">JUGAR</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>

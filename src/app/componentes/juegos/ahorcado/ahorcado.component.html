@@ -1,0 +1,41 @@
+<section class="ahorcado-container">
+    <!-- <div class="container d-flex flex-column justify-content-center juego-contenedor" *ngIf="user"> -->
+    <div class="container juego-contenedor">
+        <h1 class="titulo-ahorcado tracking-in-expand-forward-top animated-shadow">AHORCADO</h1>
+        <div class="contenedor-general row">
+            <div class="col">
+                <div>
+                    <img class="img-horca" src="../../../../assets/ahorcado/horca_{{image}}.png" alt="horca" />
+                    <p class="intentos"> Intentos {{ attempts }}/6</p>
+                </div>
+            </div>
+            <div class="col contenedor-botones">
+                <p *ngIf="attempts!=1" class="intentosDos"> Te quedan {{ attempts }} intentos</p>
+                <p *ngIf="attempts==1" class="intentosDos"> Te queda un 1 intento ¡Aprovechalo!</p>
+                <div class="row palabra-adivinar lineIntentos">
+                    <div class="col-md-12 text-center">
+                        <div *ngFor="let hyphen of hyphenatedWord" class="d-inline">
+                            <h1 style="font-size: 40px;" class="d-inline p-2">{{ hyphen }}</h1>
+                        </div>
+                    </div>
+                    <span class="puntaje">(Puntaje: {{ score }})</span>
+                </div>
+                <div class="container mt-5 p-4">
+                    <button *ngFor="let letter of buttonLetters; let i=index" id="boton{{i}}" class="btn-letra" (click)="sendLetter(letter, i)">
+                        {{ letter }}
+                    </button>
+                </div>
+                <div *ngIf="activeGame">
+                    <button class="btn-reiniciar" (click)="generarPista()">
+                        PEDIR PISTA
+                    </button>
+                </div>
+                <div *ngIf="!activeGame">
+                    <button class="btn-reiniciar" (click)="restartGame()">
+                        REINICIAR JUEGO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

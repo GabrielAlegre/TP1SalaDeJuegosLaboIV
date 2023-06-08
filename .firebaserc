@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "saladejuegostplaboiv": {
+      "hosting": {
+        "salaDeJuegoTp1LaboIV": [
+          "saladejuegostplaboiv"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "saladejuegostplaboiv"
+  }
+}

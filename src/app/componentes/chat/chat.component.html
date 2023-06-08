@@ -1,0 +1,29 @@
+<section class="chat-container">
+  <div class="card text-center contenedor-carta view-from-right">
+    <div class="card-header">CHAT DE USUARIOS</div>
+
+    <div class="card-body">
+      <div id="contenedor-mensajes" class="contenedor-mensajes">
+
+          <p *ngFor="let unMensaje of mensajesDeLaBd" class="p-2 mensajes" [ngClass]="
+              mailUserQueEstaLogueado == unMensaje.emailUsuario
+                ? 'mensaje-enviado'
+                : 'mensaje-recibido'
+            ">
+            <span [ngClass]="mailUserQueEstaLogueado == unMensaje.emailUsuario ? 'email-1' : 'email-2'">{{
+              unMensaje.nombreUsuario }}</span>
+            <br />
+            {{ unMensaje.textoMensaje }} <br />
+            <span class="fecha">{{ unMensaje.fechaDeEnvio }}</span>
+          </p>
+   
+      </div>
+    </div>
+
+    <form class="card-footer text-muted input-group" (ngSubmit)="enviarMensaje()">
+      <input type="text" class="form-control" placeholder="Ingrese su mensaje" [(ngModel)]="mensajeQueSeEnviara"
+        [ngModelOptions]="{ standalone: true }" /> 
+        <img (click)="enviarMensaje()" style="width: 35px; margin-left: 10px; cursor: pointer;" src="../../../assets/enviar.png" alt="">
+    </form>
+  </div>
+</section>

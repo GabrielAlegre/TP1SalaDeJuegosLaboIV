@@ -1,0 +1,22 @@
+<header>
+    <div class="overlay"></div>
+    <video plays-inline autoplay muted loop>
+        <source src="../../../assets/videoFondoJuegos.mp4"
+            type="video/mp4">
+    </video>
+    
+    <div class="container">
+        <div class = "content">
+            <h2 class="titulo">Bienvenido!</h2>
+            <h3 class="titulo">Gabriel Alegre 4A</h3>
+            <h5 class="titulo">Trabajo Practico N°1</h5>
+            <span><!-- line here --></span>
+            <p id="pHome">¡Espero que disfrute su estadia en la Sala de Juegos!</p>
+              <p style="margin-bottom: 20px;">Ante cualquier consulta: gabrielAlegre68@gmail.com</p>
+              <div id="divbotones">
+                  <button *ngIf="!authlogin.sePudo" routerLink="/login" class="btn btn-warning btn-lg action-button" type="button"><i class="ml-2">Iniciar sesión!</i></button>
+                  <button *ngIf="!authlogin.sePudo" routerLink="/registro" class="btn btn-warning btn-lg action-button" type="button"><i class="ml-2">Registrate!</i></button>
+              </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,34 @@
+<section class="preguntados-container">
+  <div class="container d-flex flex-column justify-content-center">
+    <h1 class="titulo-preguntados tracking-in-expand-forward-top" style="margin-top: 70px;">PREGUNTADOS</h1>
+    <p class="puntuacion mt-1">
+      Puntuación: {{ score }}
+    </p>
+    <div class="row" *ngIf="loadedQuestions">
+      <div class="contendor-bandera col">
+        <img *ngIf="!gameOver" style="margin-bottom: 20px; margin-top: 20px;" src="{{ currentQuestion.flag }}" alt="bandera" />
+        <span *ngIf="!gameOver" class="intentos" style="font-size: 18px;">(Intentos: {{ attempts }}/10)</span>
+        <div class="contenedor-pregunta col">
+          <h3 *ngIf="!gameOver" class="mt-3" style="margin-bottom: 0;">¿ A qué país pertenece esta bandera ?</h3>
+          <p class="juego-terminado mt-5" [ngClass]="victory ? 'victoria' : 'derrota'" *ngIf="gameOver">
+            {{ gameOverText }}
+          </p>
+          <p class="parrafoGanador" [ngClass]="victory ? 'victoria' : 'derrota'" *ngIf="gameOver">
+            Has acertado {{ score }} banderas ¡Vuelva a jugar!
+          </p>
+          <div *ngIf="activeGame" class="button-container">
+            <button class="btn-juegos m-2" *ngFor="let option of currentQuestion.options" (click)="play(option, $event)"
+              [ngClass]="correctAnswer ? 'correcta' : ''" [ngClass]="wrongAnswer ? 'incorrecta' : ''">
+              {{ option }}
+            </button>
+          </div>
+          <div *ngIf="!activeGame">
+            <button class="btn-reiniciar" (click)="restartGame()">
+              Reiniciar Juego
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

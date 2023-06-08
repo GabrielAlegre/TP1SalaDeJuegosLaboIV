@@ -1,0 +1,142 @@
+.chat-container {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../../../assets/fondoChat.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    min-height: 94vh;
+  }
+  
+  .contenedor-carta {
+    width: 90vw;
+    height: 580px;
+    position: fixed;
+    z-index: 1;
+    top: 56%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .card-body {
+    background-color: rgba(71, 71, 71, 0.91);
+    background-blend-mode: overlay;
+    /* opacity: 1; */
+    padding: 0.5rem;
+    background-image: url("https://i.pinimg.com/originals/83/b8/09/83b809857acd41a7bad4935b4734f9fc.gif");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 16px rgb(196, 5, 170);
+    
+  }
+  
+  .card-header {
+    background-color: rgb(104, 15, 92);
+    color: white;
+    font-weight: bolder;
+    box-shadow: 0 0 16px rgb(196, 5, 170);
+  }
+  
+  .btn-enviar {
+    cursor: pointer;
+    color: #fff;
+    background: rgb(196, 5, 170);
+  }
+  
+  .btn-enviar:active {
+    transition: all 0.5s;
+    transform: scale(0.8);
+  }
+  
+  .contenedor-mensajes {
+    overflow: scroll;
+    padding: 0.3rem;
+    height: 350px;
+    /* overflow-y: auto; */
+  }
+  
+  .contenedor-mensajes::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card-footer {
+    background: rgba(0, 0, 0, 0.507);
+    box-shadow: 0 0 16px rgb(196, 5, 170);
+  }
+  
+  .mensaje-enviado {
+    display: block;
+    float: right;
+    background-color: rgba(54, 219, 17, 0.649);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    min-width: 50.1%;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .mensaje-recibido {
+    display: block;
+    float: left;
+    background-color: rgba(241, 226, 10, 0.649);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    min-width: 50.1%;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .email-1 {
+    font-size: 1.2rem;
+    color: rgb(49, 199, 240);
+    font-weight: bold;
+  }
+  
+  .email-2 {
+    text-shadow: 0px 0px 0px black;
+    font-size: 1.2rem;
+    color: rgb(14, 72, 23);
+    font-weight: bold;
+  }
+  
+  .fecha {
+    font-size: 0.9rem;
+    text-shadow: 0px 0px 0px black;
+
+    color: rgb(0, 0, 0);
+    text-align: right;
+    float: right;
+  }
+  
+  .view-from-right {
+    animation: viewFromRight 0.5s;
+  }
+  
+  @keyframes viewFromRight {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+  
+  @media screen and (max-width: 480px) {
+    .contenedor-carta {
+      width: 99vw;
+      height: 85vh;
+      position: fixed;
+      margin-top: 2rem;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  
+    .contenedor-mensajes {
+      height: 30rem;
+    }
+  }

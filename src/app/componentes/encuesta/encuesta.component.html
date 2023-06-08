@@ -1,0 +1,152 @@
+<div class="encuesta-container">
+  <form class="container contenedor-form">
+    <div class="row d-flex flex-column">
+      <h3 class="fondoParaTextos">Encuesta</h3>
+      <div class="d-flex flex-row align-items-center mb-3 log-input">
+
+        <div class="form-outline flex-fill mb-0 ">
+          <label class="mb-0 form-label text-white" for="form3Example6c">Nombre: </label>
+          <input [ngModelOptions]="{standalone: true}" (input)="validarName()"
+            [ngClass]="{'is-invalid': !nameValido, 'is-valid': nameValido}" [(ngModel)]="nombre" type="text"
+            id="form3Example6c" class="form-control text-success" placeholder="Ingrese nombre" />
+          <div class="invalid-feedback" style="margin-left: 5px;" *ngIf="nombre.length > 0">
+            Nombre invalido (minimo 3 caracteres - maximo 15)
+          </div>
+          <div class="valid-feedback">
+            Nombre de usuario válido
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row align-items-center mb-3 log-input">
+
+        <div class="form-outline flex-fill mb-0 ">
+          <label class=" mb-0 form-label text-white" for="form3Example1c">Apellido: </label>
+          <input [ngModelOptions]="{standalone: true}" (input)="validarApellido()"
+            [ngClass]="{'is-invalid': !apellidoValido, 'is-valid': apellidoValido}" [(ngModel)]="apellido" type="text"
+            id="form3Example6c" class="form-control text-success" placeholder="Ingrese apellido" />
+          <div class="invalid-feedback" style="margin-left: 5px;" *ngIf="apellido.length > 0">
+            Apellido invalido (minimo 3 caracteres - maximo 15)
+          </div>
+          <div class="valid-feedback">
+            Apellido de usuario válido
+          </div>
+
+        </div>
+      </div>
+
+      <div class="d-flex flex-row align-items-center mb-3 log-input">
+       
+        <div class="form-outline flex-fill mb-0">
+          <label class=" mb-0 form-label text-white" for="form3Example4c">Edad: </label>
+          <input [ngModelOptions]="{standalone: true}" (input)="validarEdad()"
+            [ngClass]="{'is-invalid': !edadValidada, 'is-valid': edadValidada}" [(ngModel)]="edad" type="number"
+            id="form3Example4c" class="form-control text-success" placeholder="Ingrese edad" />
+          <div class="invalid-feedback" *ngIf="edad!=null && edad!=0" >
+            Ingrese una edad válida (minimo 18 maximo 99)
+          </div>
+          <div class="valid-feedback">
+            Edad válido
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row align-items-center mb-3 log-input">
+       
+        <div class="form-outline flex-fill mb-0">
+          <label class=" mb-0 form-label text-white" for="formTelefono">Telefono: </label>
+          <input [ngModelOptions]="{standalone: true}" (input)="validarTelefono()"
+            [ngClass]="{'is-invalid': !telefonoValido, 'is-valid': telefonoValido}" [(ngModel)]="telefono" type="text"
+            id="formTelefono" class="form-control text-success" placeholder="Ingrese Telefono" />
+          <div class="invalid-feedback" *ngIf="telefono.length > 0">
+            Ingrese un telefono valido minimo 8 numeros - maximo 10 (ejemplo: 34102808 0 1134102808)
+          </div>
+          <div class="valid-feedback">
+            Telefono valido
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr style="margin-bottom: 5px; margin-top: 0;" />
+    <div class="preguntas">
+     
+      <div class="col-sm" style="margin-left: 30px;">
+        <label class="form-label">¿Qué juego probaste?</label>
+        <div class="form-check" [ngClass]="{'is-invalid': !checkValidado, 'is-valid': checkValidado}">
+          <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="preguntados" id="preguntados" name="juegos" />
+          <label class="form-check-label" for="preguntados"> Preguntados </label>
+        </div>
+        <div class="form-check">
+          <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="mayorMenor" id="mayorMenor" name="juegos" />
+          <label class="form-check-label" for="mayorMenor"> Mayor o Menor </label>
+        </div>
+        <div class="form-check">
+          <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="snake" id="snake" name="juegos" />
+          <label class="form-check-label" for="snake">
+            Snake (juego propio)
+          </label>
+        </div>
+        <div class="form-check">
+          <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="ahorcado" id="ahorcado" name="juegos" />
+          <label class="form-check-label" for="ahorcado">
+            Ahorcado
+          </label>
+        </div>
+        <div class="invalid-feedback">
+          *Campo obligatorio: Seleccione el juegos que probo
+        </div>
+        <div class="valid-feedback">
+          Juego válido
+        </div>
+      </div>
+     
+      <div class="col-sm">
+        <label class="form-label">¿Que otro juego te gustaria que agreguemos?</label>
+        <select (input)="validarSelect()"  style="width: 10rem" class="form-select" id="juegoAgregar"  [ngClass]="{'is-invalid': !selecValidado, 'is-valid': selecValidado}">
+          <option value="" selected>Elija juego...</option>
+          <option value="Tetris">Tetris</option>
+          <option value="Truco">Truco</option>
+          <option value="Pac-Man">Pac-Man</option>
+          <option value="Mario Bros">Mario Bros</option>
+        </select>
+        <div class="invalid-feedback">
+          *Campo obligatorio: por favor elija un juego
+        </div>
+        <div class="valid-feedback">
+          Juego válido
+        </div>
+      </div>
+    
+      <div style="margin-right: 50px;">
+        <div class="col-sm">
+          <label class="form-label">¿Recomendarias la pagina?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="recomendacion" id="opcion3" value="si" />
+            <label class="form-check-label" for="opcion3"> SI </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="recomendacion" id="opcion2" value="no" checked/>
+            <label class="form-check-label" for="opcion2"> NO </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 style="text-align: center;">¿Como calificarias a la pagina?</h3>
+      <div class="rating-container">
+        <input class="inputEstellas" type="radio" name="rating" id="star-1" value="5">
+          <label class="labelEstrellas" for="star-1"><i class="fa-solid fa-star"></i></label>
+        <input class="inputEstellas" type="radio" name="rating" id="star-2" value="4">
+          <label class="labelEstrellas" for="star-2"><i class="fa-solid fa-star"></i></label>
+        <input class="inputEstellas" type="radio" name="rating" id="star-3" value="3">
+          <label class="labelEstrellas" for="star-3"><i class="fa-solid fa-star"></i></label>
+        <input class="inputEstellas" type="radio" name="rating" id="star-4" value="2">
+          <label class="labelEstrellas" for="star-4"><i class="fa-solid fa-star"></i></label>
+        <input class="inputEstellas" type="radio" name="rating" id="star-5" value="1">
+          <label class="labelEstrellas" for="star-5"><i class="fa-solid fa-star"></i></label>
+      </div>
+    <hr />
+    <button (click)="generarEncuesta()" type="submit" class="btn-juegos">Enviar encuesta</button>
+  </form>
+</div>

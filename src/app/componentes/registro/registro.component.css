@@ -1,0 +1,76 @@
+.log-input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    background: #fafafa;
+    color: #636363;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #757575;
+  }
+  input, textarea, select {
+    /* background: #0e0d2d; */
+    border: none;
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    line-height: 24px;
+    height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: none;
+    width: 100%;
+  }
+  
+  
+  .log-input:focus { outline: none; }
+  label{
+    font-size: medium;
+  }
+
+  .boton{
+    margin-right: 50px;;
+  }
+
+  .divMayor{
+    color: white;
+    
+  }
+
+  section{
+    background-image: url("../../../assets/fondoRegistroSalaDeJuegos.gif");
+    background-size: cover;
+    background-position: center;
+    min-height: 94vh;
+    
+  }
+
+  .divPrincipalCard{
+    border: 2px dotted white;
+  }
+
+  .divCardContenedoraTotal{
+    margin-top: 60px;
+  }
+
+  .gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    }
+  
+    .boton{
+      flex: 1;
+      margin: 0 5px;
+    }
+
+    #divBotones{
+      display: flex;
+    }

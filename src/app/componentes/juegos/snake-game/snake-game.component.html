@@ -1,0 +1,53 @@
+<!-- <section class="preguntados-container">
+  <div class="container">
+    <h1 class="titulo-viborita">Snake Game</h1>
+    <canvas *ngIf="inicioJuego" #canvas></canvas>
+  </div>
+  <div>
+    <button *ngIf="isGameOver" (click)="restartGame()">Restart Game</button>
+    <button *ngIf="!inicioJuego" (click)="startGame()">Start Game</button>
+  </div>
+</section>
+   -->
+<section class="viborita-container">
+  <div class="container d-flex flex-column justify-content-center">
+    <h1 style="white-space: pre-wrap;" class="titulo-viborita tracking-in-expand-forward-top">Juego viborita<br>
+      <span *ngIf="inicioJuego" style="font-size: 28px; margin-top: 3px">Puntuacion: {{score}}</span></h1>
+
+    <div *ngIf="!inicioJuego" class="container d-flex flex-column justify-content-center">
+      <p style="font-size: 40px;" class="tituloDescripcion">
+        ¡Bienvenido!
+        <!-- <span style="font-size: 18px;" class="descripcionJuego">Controla la serpiente en la pantalla y hazla crecer tanto
+          como sea posible comiendo los alimentos disponibles, sin chocar contra las paredes o contra su propio cuerpo.</span> -->
+          <span style="font-size: 18px;" class="descripcionJuego">Para ganar se debe obtener una puntuación de 50. Cada vez que la serpiente coma un alimento se sumaran 10 puntos.</span>
+
+          <span style="font-size: 40px; color: brown; display: block;" >¡Importante!</span>
+          <span style="font-size: 18px; padding-top: 0px;" class="descripcionJuego">Para manejar y mover a la viborita utilice las siguientes teclas: </span>
+          <img style="width: 300px; display: block; margin-left: 430px;" src="../../../../assets/teclita.png" alt="">
+      </p>
+    </div>
+
+    <div class="row">
+      <canvas  #canvas>
+      </canvas>
+      <div *ngIf="mostrarGameOver" class="game-over-overlay">
+        <p class="game-over-text gameOverTexto">Game over</p>
+        <div style="margin-top:5%;">
+          <span style="font-size: 40px;" class="intentos" [ngClass]="{'gano': gano, 'perdio': !gano}">{{textoGameOver}}</span>
+            <span style="font-size: 22px; margin-top: 0px;" class="mensajePerdido">Su puntuación fue de {{score}}</span>
+            <span *ngIf="textoGameOver=='¡HAS PERDIDO!'" style="font-size: 22px; margin-top: 0px;" class="mensajePerdido">¡A no Decaer, vuelva a intentarlo!</span>
+            <span  *ngIf="textoGameOver=='¡HAS GANADO!'" style="font-size: 22px; margin-top: 5px;" class="mensajePerdido">¡Sigue jugando!</span>
+          </div>
+          <button class="game-over-boton" (click)="startGame()">
+            Volver a jugar
+          </button>
+      </div>
+      <!-- <div *ngIf="isGameOver" class="game-over-text"></div> -->
+    </div>
+    <div *ngIf="!inicioJuego" >
+      <button class="btn-comenzar-reiniciar" (click)="startGame()">
+        {{ startButtonText }}
+      </button>
+    </div>
+  </div>
+</section>

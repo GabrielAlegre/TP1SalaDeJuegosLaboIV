@@ -1,0 +1,146 @@
+<div class="listado-container">
+  <h2 class="fondoParaTextos" style="margin-bottom: 35px;">ESTADISTICAS GENERALES</h2>
+  <table class="table contenedor-tabla container">
+    <thead>
+      <tr>
+        <th scope="col">JUEGO</th>
+        <th scope="col">VECES JUGADO</th>
+        <th scope="col">VICTORIAS</th>
+        <th scope="col">DERROTAS</th>
+        <th scope="col">PUNTAJE PROMEDIO OBTENIDO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tr">
+        <td>AHORCADO</td>
+        <td>{{ ahorcadoVecesJugadas }}</td>
+        <td>{{ ahorcadoVictorias }}</td>
+        <td>{{ ahorcadoDerrotas }}</td>
+        <td>{{ ahorcadoPuntajePromedio }}</td>
+      </tr>
+      <tr class="tr">
+        <td>MAYOR O MENOR</td>
+        <td>{{ mayorMenorVecesJugadas }}</td>
+        <td>{{ mayorMenorVictorias }}</td>
+        <td>{{ mayorMenorDerrotas }}</td>
+        <td>{{ mayorMenorPuntajePromedio }}</td>
+      </tr>
+      <tr class="tr">
+        <td>PREGUNTADOS</td>
+        <td>{{ preguntadosVecesJugadas }}</td>
+        <td>{{ preguntadosVictorias }}</td>
+        <td>{{ preguntadosDerrotas }}</td>
+        <td>{{ preguntadosPuntajePromedio }}</td>
+      </tr>
+      <tr class="tr">
+        <td>Snake</td>
+        <td>{{ viboritaVecesJugadas }}</td>
+        <td>{{ viboritaVictorias }}</td>
+        <td>{{ viboritaDerrotas }}</td>
+        <td>{{ viboritaPuntajePromedio }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  
+  <div *ngIf="seleccionoUnUsuario">
+    <h3 style="margin-top: 50px; margin-bottom: 30px;" class="fondoParaTextos">Estadistica individuales del usuario {{usuarioSeleccionado}}</h3>
+    <table class="table contenedor-tabla container">
+      <thead>
+        <tr>       
+          <th scope="col">JUEGO</th>
+          <th scope="col">VECES JUGADO</th>
+          <th scope="col">VICTORIAS</th>
+          <th scope="col">DERROTAS</th>
+          <th scope="col">PUNTAJE PROMEDIO OBTENIDO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tr" *ngIf="seleccionoAhorcado">
+          <td>AHORCADO</td>
+          <td>{{ ahorcadoVecesJugadasDelUsuarioSeleccionado }}</td>
+          <td>{{ ahorcadoVictoriasDelUsuarioSeleccionado }}</td>
+          <td>{{ ahorcadoDerrotasDelUsuarioSeleccionado }}</td>
+          <td>{{ ahorcadoPuntajePromedioDelUsuarioSeleccionado }}</td>
+        </tr>
+        <tr class="tr" *ngIf="seleccionoMayorMenor">
+          <td>MAYOR O MENOR</td>
+          <td>{{ mayorMenorVecesJugadasDelUsuarioSeleccionado }}</td>
+          <td>{{ mayorMenorVictoriasDelUsuarioSeleccionado }}</td>
+          <td>{{ mayorMenorDerrotasDelUsuarioSeleccionado }}</td>
+          <td>{{ mayorMenorPuntajePromedioDelUsuarioSeleccionado }}</td>
+        </tr>
+        <tr class="tr" *ngIf="seleccionoPreguntados">
+          <td>PREGUNTADOS</td>
+          <td>{{ preguntadosVecesJugadasDelUsuarioSeleccionado }}</td>
+          <td>{{ preguntadosVictoriasDelUsuarioSeleccionado }}</td>
+          <td>{{ preguntadosDerrotasDelUsuarioSeleccionado }}</td>
+          <td>{{ preguntadosPuntajePromedioDelUsuarioSeleccionado }}</td>
+        </tr>
+        <tr class="tr" *ngIf="seleccionoSnake">
+          <td>Snake</td>
+          <td>{{ viboritaVecesJugadasDelUsuarioSeleccionado }}</td>
+          <td>{{ viboritaVictoriasDelUsuarioSeleccionado }}</td>
+          <td>{{ viboritaDerrotasDelUsuarioSeleccionado }}</td>
+          <td>{{ viboritaPuntajePromedioDelUsuarioSeleccionado }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <button  style="width: 300px; margin: 0 auto; margin-top: 30px;" (click)="reiniciarTabla()" type="submit" class="btn-juegos">Cambiar opciones</button>
+  </div>
+
+  <form  style="margin-top: 40px; width: 40vw;" class="container contenedor-form" *ngIf="!seleccionoUnUsuario">
+    <h2 style="text-align: center; margin-bottom: 20px;">Estadisticas individuales</h2>
+    <div style=" width: 40vw; height: 13vw;" class="preguntas" >
+      <div class="col-sm" style="margin-left: 10px;">
+        <label class="form-label">¿Las estadisticas de que usuario desea ver?</label>
+        <div style="display: flex;
+        flex-direction: column;">
+          <select  [ngClass]="{'is-invalid': !selecValidado, 'is-valid': selecValidado}" (input)="validarSelect()"  class="form-select" id="usuariosRegistrados">
+            <option value="" selected>Elija un usuario....</option>
+            <option *ngFor="let opcion of usuariosRegistrados" [value]="opcion.emailUsuario">{{ opcion.emailUsuario }}</option>
+          </select>
+          <div class="invalid-feedback">
+            *Campo obligatorio: seleccione un usuario
+          </div>
+          <div class="valid-feedback">
+            Usuario correcto
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm" style="margin-left: 170px;">
+        <label class="form-label">¿Las estadisticas de que juego desea ver?</label>
+        <div class="form-check" [ngClass]="{'is-invalid': !checkValidado, 'is-valid': checkValidado}">
+          <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="preguntados" id="preguntados" name="juegos" />
+          <label class="form-check-label" for="preguntados"> Preguntados </label>
+        </div>
+        <div class="form-check">
+          <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="mayorMenor" id="mayorMenor" name="juegos" />
+          <label class="form-check-label" for="mayorMenor"> Mayor o Menor </label>
+        </div>
+        <div class="form-check">
+          <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="snake" id="snake" name="juegos" />
+          <label class="form-check-label" for="snake">
+            Snake (juego propio)
+          </label>
+        </div>
+        <div class="form-check">
+          <input (input)="validarCheck()" class="form-check-input" type="checkbox" value="ahorcado" id="ahorcado" name="juegos" />
+          <label class="form-check-label" for="ahorcado">
+            Ahorcado
+          </label>
+        </div>
+        <div class="invalid-feedback">
+          *Obligatorio: Seleccione al menos un juegos
+        </div>
+        <div class="valid-feedback">
+          Juego válido
+        </div>
+      </div>
+    </div>
+    <button (click)="generarEstadisticasIndividuales()" type="submit" class="btn-juegos">Ver estadisticas</button>
+  </form>
+</div>

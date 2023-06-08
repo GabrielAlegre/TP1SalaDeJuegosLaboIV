@@ -1,0 +1,40 @@
+<section class="mayormenor-container">
+    <div class="container d-flex flex-column justify-content-center">
+      <h1 class="titulo-mayormenor tracking-in-expand-forward-top">MAYOR MENOR</h1>
+      <p *ngIf="activeGame" style="font-size: 30px;" class="intentos">
+        Puntuación: {{ score }}
+        <span *ngIf="attempts!=0" style="font-size: 20px;" class="intentos">(Intentos: {{ attempts }}/10)</span>
+      </p>
+      <p *ngIf="!inicioJuego" style="font-size: 30px;" class="intentos">
+        ¡Bienvenido!
+        <span style="font-size: 20px;" class="intentos">¡Comienza a jugar ahora mismo! Logra 5 o mas aciertos para conseguir la victoria!</span>
+      </p>
+      <p *ngIf="gameOver" style="font-size: 30px;" class="intentos">
+        ¡Juegos terminado!
+        <span style="font-size: 18px;" class="intentos">{{textGameOver}} Su puntuación fue de {{ score }} aciertos</span>
+        <span *ngIf="textGameOver=='¡PERDISTE!'" style="font-size: 18px; margin-top: 0px;" class="mensajePerdido">¡A no Decaer, vuelva a intentarlo!</span>
+        <span *ngIf="textGameOver=='¡GANASTE!'" style="font-size: 18px; margin-top: 0px;" class="mensajePerdido">¡Sigue jugando!</span>
+      </p>
+      <div class="row">
+        <div *ngIf="activeGame" class="col">
+          <img class="carta-izquierda" src="{{ cardImage }}" alt="" />
+        </div>
+        <div class="col">
+          <img
+            class="carta-derecha"
+            src="../../../../assets/mayor menor/reverso.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div *ngIf="!activeGame">
+        <button class="btn-comenzar-reiniciar" (click)="startGame()">
+          {{ startButtonText }}
+        </button>
+      </div>
+      <div class="btn-mayormenor" *ngIf="activeGame">
+        <button style="margin-bottom: 20px;" class="btn btn-primary btn-juegos" (click)="playMayorMenor('menor')">Menor</button>
+        <button class="btn btn-primary btn-juegos" (click)="playMayorMenor('mayor')">Mayor</button>
+      </div>
+    </div>
+  </section>
