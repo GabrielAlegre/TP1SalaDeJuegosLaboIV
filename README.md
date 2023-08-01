@@ -46,6 +46,23 @@ El juego de la viborita, también conocido como Snake, para ganar se debe obter 
 ![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/3da7693e-fda8-4bbb-8fe5-e00c0c5ff4e2)
 
 
+## Listado de resultados
+En esta sección se visualizará información relevante acerca de las estadísticas de los juegos. Al finalizar cada juego se guardará registro del resultado, datos del usuario, fecha, puntaje, etc.
+También se da la opción de visualizar estadísticas individuales, eligiendo al usuario del cual queres saber la estadística y el juego.
+![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/e654140a-37f0-419e-bced-b814c2b22e8a)
+
+
 ## Chat
 En esta sección los usuarios logueados tendrán la opción del chat para comunicarse con otros jugadores.
 ![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/33be3df9-7a64-439e-b8a3-a433d414cb74)
+
+
+## Encuesta
+En esta sección el usuario tendrá la opción de hacer una encuesta en la cual se le va a pedir los siguientes datos: Nombre y apellido. Edad. Número de teléfono. 3 preguntas relacionadas a la aplicación.
+cuenta con validaciones, todos los campos son requeridos y las respuestas se guardan en una base de datos identificando el usuario.
+![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/c1616ef6-0e03-4871-9b95-0fca9eaeb1e2)
+
+## Quien soy
+En esta sección se visualizarán los datos personales, imagen, explicación del juego propio del desarrollador.
+![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/ee16870a-8f06-4630-b557-6828e32daa0f)
+
