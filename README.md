@@ -26,6 +26,24 @@ En esta sección los usuarios logueados tendrán la opción de poder jugar a los
 ![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/a9c6821e-b250-414e-80dc-6c9ded5f36d3)
 
 ### Ahorcado
+El juego consiste en adivinar una palabra al azar en menos de 6 intentos. El usuario tiene la opción de pedir una pista.
+![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/b131ad7d-3e57-4265-84f4-b27830c687fd)
+
+### Mayor o Menor
+El juego consiste en adivinar si la proxima carta es menor o mayor. Con 5 aciertos se consigue la victoria.
+Antes de comenzar se le da una bienvenida al juego e información relevante acerca del juego
+![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/0a9e9814-b4a7-415d-8e05-3296ef9dee4b)
+
+Una vez presionado el botón se da comienzo al juego
+![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/caffa643-5287-44b4-a2f4-00e16a17abbc)
+
+### Preguntados
+El juego consiste en adivinar el país de la bandera mostrada, si en 10 turnos aciertas 5 o mas veces para obtener la victoria.
+![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/22e00a81-06a9-4b0b-af74-c060288e44fa)
+
+### Snake (Juego propio)
+El juego de la viborita, también conocido como Snake, para ganar se debe obter 50 puntos, cada vez que se come un alimento se obtendran 10. El juego consiste en controlar una serpiente en la pantalla y hacerla crecer tanto como sea posible al comerse los alimentos disponibles, sin chocar contra las paredes o contra su propio cuerpo.
+![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/3da7693e-fda8-4bbb-8fe5-e00c0c5ff4e2)
 
 
 ## Chat
