@@ -20,3 +20,12 @@ Desde esta sección vamos a ingresar al sistema. Cuenta con botones de acceso r�
 
 ![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/37279576-0d18-42fd-b6a4-e2fbcac6f1f7)
 
+# Una vez dentro del sistema tendremos múltiples opciones:
+## Juegos
+En esta sección los usuarios logueados tendrán la opción de poder jugar a los distintos juegos disponibles, cada juego tiene una breve descripción de cada uno. 
+![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/a9c6821e-b250-414e-80dc-6c9ded5f36d3)
+
+
+## Chat
+En esta sección los usuarios logueados tendrán la opción del chat para comunicarse con otros jugadores.
+![image](https://github.com/GabrielAlegre/TP1SalaDeJuegosLaboIV/assets/86837104/33be3df9-7a64-439e-b8a3-a433d414cb74)
